@@ -3,635 +3,337 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valarie Atieno - Cybersecurity Professional</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #ffd700;
-        }
-
-        main {
-            margin-top: 80px;
-        }
-
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 4rem 0;
-            text-align: center;
-        }
-
-        .hero-content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .hero-image {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            border: 5px solid white;
-            object-fit: cover;
-        }
-
-        .hero-text h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero-text p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 12px 24px;
-            border: none;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s;
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background: white;
-            color: #667eea;
-        }
-
-        .btn-primary:hover {
-            background: #f0f0f0;
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .btn-secondary:hover {
-            background: white;
-            color: #667eea;
-        }
-
-        .section {
-            padding: 4rem 0;
-            margin: 2rem 0;
-        }
-
-        .section:nth-child(even) {
-            background: white;
-        }
-
-        .section h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #333;
-        }
-
-        .resume-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .resume-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-
-        .resume-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .resume-card h3 {
-            color: #667eea;
-            margin-bottom: 1rem;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .project-card {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .project-image {
-            width: 100%;
-            height: 200px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-        }
-
-        .project-content {
-            padding: 1.5rem;
-        }
-
-        .project-content h3 {
-            color: #333;
-            margin-bottom: 1rem;
-        }
-
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin: 1rem 0;
-        }
-
-        .tech-tag {
-            background: #e9ecef;
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.9rem;
-            color: #495057;
-        }
-
-        .project-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .project-links a {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .project-links a:hover {
-            color: #764ba2;
-        }
-
-        .challenges-grid {
-            display: grid;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .challenge-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border-left: 5px solid #667eea;
-        }
-
-        .challenge-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-
-        .challenge-category {
-            background: #667eea;
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.9rem;
-        }
-
-        .challenge-section {
-            margin: 1rem 0;
-        }
-
-        .challenge-section h4 {
-            color: #333;
-            margin-bottom: 0.5rem;
-        }
-
-        .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .contact-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .contact-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .contact-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: #667eea;
-        }
-
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 4rem;
-        }
-
-        @media (max-width: 768px) {
-            .hero-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .hero-text h1 {
-                font-size: 2rem;
-            }
-            
-            .nav-links {
-                flex-direction: column;
-                gap: 1rem;
-            }
-        }
-    </style>
+    <title>Kelvin - PHP Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <div class="logo">Valarie Atieno</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#challenges">Lab Challenges</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-name">KIMALIFE</span>
+                <span class="logo-tech">TECH</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#education" class="nav-link">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">My Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
             </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="home" class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <img src="IMG_20240420_193749.jpg" alt="Valerie Atieno" class="hero-image">
-
-                    <div class="hero-text">
-                        <h1>Valarie Atieno</h1>
-                        <p>Cybersecurity Professional & Penetration Tester</p>
-                        <p>Passionate about securing digital environments and solving complex security challenges through innovative solutions and continuous learning.</p>
-                        <div class="cta-buttons">
-                            <a href="#resume" class="btn btn-primary">View Resume</a>
-                            <a href="#projects" class="btn btn-secondary">See Projects</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
-        </section>
+        </div>
+    </nav>
 
-        <section id="resume" class="section">
-            <div class="container">
-                <h2>Resume</h2>
-                <div class="resume-grid">
-                    <div class="resume-card">
-                        <h3>Education</h3>
-                        <div class="education-item">
-                            <h4>Bachelor of Science in Computer Science</h4>
-                            <p>Egerton University | 2021-2025</p>
-                            <p>Relevant Coursework: Network Security, Cryptography, Digital Forensics</p>
-                        </div>
-                    </div>
-                    
-                    <div class="resume-card">
-                        <h3>Work Experience</h3>
-                        <div class="experience-item">
-                            <h4>Software Engineering</h4>
-                            <p>Eclectics International Limited | 2024</p>
-                            <ul>
-                                <li>Collaborated with a team of engineers to design, develop, and maintain scalable web/mobile applications.</li>
-                                <li>Contributed to front-end and/or back-end development using technologies such as React, Node.js, Java, Python, or Spring Boot.</li>
-                                <li>Wrote clean, efficient, and well-documented code following industry best practices and agile methodologies.</li>
-                                <li>Participated in code reviews, debugging, and unit/integration testing to ensure high-quality software delivery.</li>
-                                <li>Assisted in integrating RESTful APIs and working with databases such as PostgreSQL.</li>
-                                <li>Contributed to team meetings, sprint planning, and daily standups to discuss progress, blockers, and technical insights.</li>
-                                 <li>Gained hands-on experience with version control systems (Git/GitHub), CI/CD pipelines, and cloud platforms ( AWS, GCP, or Azure).</li>
-    
-
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="resume-card">
-                        <h3>Certifications</h3>
-                        <ul>
-                            <li>Certified Ethical Hacker (CEH) - In Progress</li>
-                            <li>CISSP Associate (2024)</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="resume-card">
-                        <h3>Technical Skills</h3>
-                        <div class="skills-category">
-                            <h4>Programming Languages:</h4>
-                            <p>Python, JavaScript, Spring-boot framework </p>
-                        </div>
-                        <div class="skills-category">
-                            <h4>Security Tools:</h4>
-                            <p>Nmap, Wireshark, Burp Suite, Metasploit</p>
-                        </div>
-                        <div class="skills-category">
-                            <h4>Technologies:</h4>
-                            <p>Linux, Docker, AWS, Git</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="section">
-            <div class="container">
-                <h2>Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-image">
-                            Network Security Monitor
-                        </div>
-                        <div class="project-content">
-                            <h3>Network Security Monitoring System</h3>
-                            <p>Developed a real-time network monitoring system that detects suspicious activities and potential security threats using machine learning algorithms.</p>
-                            <div class="tech-stack">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Scapy</span>
-                                <span class="tech-tag">Machine Learning</span>
-                                <span class="tech-tag">Flask</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#">Live Demo</a>
-                                <a href="#">GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card">
-                        <div class="project-image">
-                            Vulnerability Scanner
-                        </div>
-                        <div class="project-content">
-                            <h3>Web Application Vulnerability Scanner</h3>
-                            <p>Created an automated vulnerability scanner that identifies common web application security flaws like SQL injection, XSS, and CSRF.</p>
-                            <div class="tech-stack">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Requests</span>
-                                <span class="tech-tag">BeautifulSoup</span>
-                                <span class="tech-tag">SQLAlchemy</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#">Live Demo</a>
-                                <a href="#">GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card">
-                        <div class="project-image">
-                            Secure Chat App
-                        </div>
-                        <div class="project-content">
-                            <h3>Encrypted Chat Application</h3>
-                            <p>Built a secure messaging application with end-to-end encryption, user authentication, and secure key exchange mechanisms.</p>
-                            <div class="tech-stack">
-                                <span class="tech-tag">React</span>
-                                <span class="tech-tag">Node.js</span>
-                                <span class="tech-tag">Socket.io</span>
-                                <span class="tech-tag">Cryptography</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#">Live Demo</a>
-                                <a href="#">GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="challenges" class="section">
-            <div class="container">
-                <h2>Lab Challenges</h2>
-                <div class="challenges-grid">
-                    <div class="challenge-card">
-                        <div class="challenge-header">
-                            <h3>SQL Injection Challenge</h3>
-                            <span class="challenge-category">Web Security</span>
-                        </div>
-                        <div class="challenge-section">
-                            <h4>Problem Statement:</h4>
-                            <p>Exploit a vulnerable login form to gain unauthorized access to a database and extract sensitive information.</p>
-                        </div>
-                        <div class="challenge-section">
-                            <h4>Approach:</h4>
-                            <p>1. Analyzed the login form for input validation weaknesses<br>
-                               2. Tested various SQL injection payloads<br>
-                               3. Used union-based injection to extract data</p>
-                        </div>
-                        <div class="challenge-section">
-                            <h4>Tools Used:</h4>
-                            <p>Burp Suite, SQLMap, Browser Developer Tools</p>
-                        </div>
-                        <div class="challenge-section">
-                            <h4>Key Lessons:</h4>
-                            <p>Importance of input validation, parameterized queries, and the principle of least privilege in database design.</p>
-                        </div>
-                    </div>
-
-                    <div class="challenge-card">
-                        <div class="challenge-header">
-                            <h3>Network Forensics Challenge</h3>
-                            <span class="challenge-category">Digital Forensics</span>
-                        </div>
-                        <div class="challenge-section">
-                            <h4>Problem Statement:</h4>
-                            <p>Analyze network traffic capture files to identify malicious activities and reconstruct attack timeline.</p>
-                        </div>
-                        <div class="challenge-section">
-                            <h4>Approach:</h4>
-                            <p>1. Used Wireshark to analyze packet captures<br>
-                               2. Identified suspicious protocols and connections<br>
-                               3. Extracted and analyzed payload data</p>
-                        </div>
-                        <div class="challenge-section">
-                            <h4>Tools Used:</h4>
-                            <p>Wireshark, tcpdump, NetworkMiner, Python scripts</p>
-                        </div>
-                        <div class="challenge-section">
-                            <h4>Key Lessons:</h4>
-                            <p>Network protocol analysis, traffic pattern recognition, and the importance of logging in incident response.</p>
-                        </div>
-                    </div>
-
-                    <div class="challenge-card">
-                        <div class="challenge-header">
-                            <h3>Cryptography Challenge</h3>
-                            <span class="challenge-category">Cryptography</span>
-                        </div>
-                        <div class="challenge-section">
-                            <h4>Problem Statement:</h4>
-                            <p>Decrypt a series of ciphertexts using various cryptographic techniques and recover the hidden message.</p>
-                        </div>
-                        <div class="challenge-section">
-                            <h4>Approach:</h4>
-                            <p>1. Analyzed cipher patterns and characteristics<br>
-                               2. Applied frequency analysis and statistical methods<br>
-                               3. Used automated tools for known cipher types</p>
-                        </div>
-                        <div class="challenge-section">
-                            <h4>Tools Used:</h4>
-                            <p>CyberChef, Python cryptography libraries, Online cipher tools</p>
-                        </div>
-                        <div class="challenge-section">
-                            <h4>Key Lessons:</h4>
-                            <p>Understanding of classical and modern cryptographic methods, importance of key management, and cryptanalysis techniques.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section">
-            <div class="container">
-                <h2>Contact</h2>
-                <div class="contact-info">
-                    <div class="contact-card">
-                        <div class="contact-icon">📧</div>
-                        <h3>Email</h3>
-                        <p>valerieochieng3@gmail.com</p>
-                    </div>
-                    <div class="contact-card">
-                        <div class="contact-icon">💼</div>
-                        <h3>LinkedIn</h3>
-                        <p>https://www.linkedin.com/in/valarie-atieno</p>
-                    </div>
-                    <div class="contact-card">
-                        <div class="contact-icon">🐙</div>
-                        <h3>GitHub</h3>
-                        <p>https://github.com/Valerie200/Valerie200.github.io/</p>
-                    </div>
-                    <div class="contact-card">
-                        <div class="contact-icon">📱</div>
-                        <h3>Phone</h3>
-                        <p>+254708091923</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
+    <!-- Home Section -->
+    <section id="home" class="home-section">
         <div class="container">
-            <p>&copy; 2024 Valarie Atieno. All rights reserved.</p>
+            <div class="home-content">
+                <div class="profile-image">
+                    <img src="images/profile.jpg" alt="Kelvin Profile">
+                </div>
+                <div class="intro-text">
+                    <h1>Bonjour, it's <span class="name-highlight">Kelvin</span></h1>
+                    <p class="role">I'm a <span class="php-highlight">PHP Developer</span></p>
+                    <p class="description">
+                        I am a passionate Frontend Developer with a strong foundation in Computer Science. By holding a degree in 
+                        Computer Science, My expertise lies in creating responsive, user-friendly websites and applications using 
+                        technologies like HTML, CSS, JavaScript, and modern frameworks such as React. With a keen eye for detail, I strive 
+                        to deliver seamless, visually appealing user experiences, ensuring both functionality and aesthetics are 
+                        prioritized in every project. My technical background, combined with my creative approach, drives my 
+                        commitment to delivering high-quality solutions.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link linkedin"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link github"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                    <button class="hire-btn">Hire Me</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section">
+        <div class="container">
+            <h2 class="section-title">My <span class="highlight">Education</span></h2>
+            <div class="education-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="institution-name">The Cooperative University Of Kenya</h3>
+                        <p class="degree">I hold a Computer Science degree from the Cooperative University of Kenya.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="institution-name">Ajira Kenya</h3>
+                        <p class="degree">I hold a certificate in AI for Graphic Design from Ajira Kenya.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="institution-name">Graphic Design</h3>
+                        <p class="degree">Logo Design, Poster Designs, Company Profiles, Flyers etc</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="institution-name">Internship</h3>
+                        <p class="degree">I attended an attachment at KTDA between June - August 2023</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="institution-name">Nguviu Boys High School</h3>
+                        <p class="degree">I hold a KCSE certificate from Nguviu Boys High School.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title">My <span class="highlight">Skills</span></h2>
+            <p class="section-description">This section shows the skills which I have managed to acquire throughout my Programming Journey.</p>
+            
+            <div class="skills-grid">
+                <div class="skills-column">
+                    <h3>Programming Skills</h3>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">HTML</span>
+                            <span class="skill-percentage">94%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="94%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">CSS</span>
+                            <span class="skill-percentage">83%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="83%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">JAVASCRIPT</span>
+                            <span class="skill-percentage">88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="88%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">PHP</span>
+                            <span class="skill-percentage">68%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="68%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-column">
+                    <h3>Soft Skills</h3>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">PROBLEM SOLVING</span>
+                            <span class="skill-percentage">92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="92%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">COMMUNICATION SKILLS</span>
+                            <span class="skill-percentage">94%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="94%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">TEAMWORK</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">TIME MANAGEMENT</span>
+                            <span class="skill-percentage">96%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="96%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title">My <span class="highlight">Services</span></h2>
+            <p class="section-description">I offer services ranging from web development, graphic designs etc</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Website Development</h3>
+                    <p>I offer professional web development services tailored to meet your unique business needs. Whether you're looking to build a custom website from scratch, revamp an existing site, or enhance your online presence.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Graphic Design</h3>
+                    <p>I offer professional web development services tailored to meet your unique business needs. Whether you're looking to build a custom website from scratch, revamp an existing site, or enhance your online presence.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Database Administration</h3>
+                    <p>I offer professional web development services tailored to meet your unique business needs. Whether you're looking to build a custom website from scratch, revamp an existing site, or enhance your online presence.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Software development</h3>
+                    <p>I offer professional web development services tailored to meet your unique business needs. Whether you're looking to build a custom website from scratch, revamp an existing site, or enhance your online presence.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Database Administration</h3>
+                    <p>I offer professional web development services tailored to meet your unique business needs. Whether you're looking to build a custom website from scratch, revamp an existing site, or enhance your online presence.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Software development</h3>
+                    <p>I offer professional web development services tailored to meet your unique business needs. Whether you're looking to build a custom website from scratch, revamp an existing site, or enhance your online presence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <p class="section-description">To get in touch with me use the following information.</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Address</h3>
+                            <p>Nairobi, Kenya.</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p>+254742970176.</p>
+                            <p>+254743372530</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>mukamikelvinkimanthi@gmail.com.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="fullName" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="send-btn">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; mukamikelvinkimanthi 2025</p>
         </div>
     </footer>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Add scroll effect to header
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(102, 126, 234, 0.95)';
-            } else {
-                header.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
